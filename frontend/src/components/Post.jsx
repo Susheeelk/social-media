@@ -77,7 +77,7 @@ socket?.on("commentedPost",(updatedData)=>{
           </div>
           <div className='w-[150px] font-semibold truncate'>{post?.author?.userName}</div>
         </div>
-       {userData._id!=post.author._id &&  <FollowButton tailwind={'px-[10px] minw-[60px] md:min-w-[100px] py-[5px] h-[30px] md:h-[40px] bg-[black] text-white rounded-2xl text-[14px] md:text-[16px]'} targetUserId={post.author?._id}/>}
+       {userData?._id!=post.author?._id &&  <FollowButton tailwind={'px-[10px] minw-[60px] md:min-w-[100px] py-[5px] h-[30px] md:h-[40px] bg-[black] text-white rounded-2xl text-[14px] md:text-[16px]'} targetUserId={post?.author?._id}/>}
        
       </div>
       <div className='w-[90%]   flex  items-center justify-center '>
