@@ -82,7 +82,7 @@ socket?.on("commentedPost",(updatedData)=>{
       </div>
       <div className='w-[90%]   flex  items-center justify-center '>
         {post.mediaType == "image" && <div className='w-[90%]    flex  items-center justify-center   '>
-          <img src={post.media} alt="" className='w-[80%] rounded-2xl  object-cover' />
+          <img src={post?.media} alt="" className='w-[80%] rounded-2xl  object-cover' />
         </div>}
 
         {post.mediaType == "video" && <div className='w-[80%]    flex flex-col items-center justify-center   '>
@@ -99,7 +99,7 @@ socket?.on("commentedPost",(updatedData)=>{
           <div className='flex justify-center items-center gap-[5px]'>
             {!post.likes.includes(userData?._id) && <GoHeart className='w-[25px] cursor-pointer h-[25px]' onClick={handleLike}/>}
             {post.likes.includes(userData?._id) && <GoHeartFill className='w-[25px] cursor-pointer h-[25px] text-red-600' onClick={handleLike}/>}
-            <span >{post.likes.length}</span>
+            <span >{post.likes?.length}</span>
           </div>
           <div className='flex justify-center items-center gap-[5px]' onClick={()=>setShowComment(prev=>!prev)}>
             <MdOutlineComment className='w-[25px] cursor-pointer h-[25px]' />
