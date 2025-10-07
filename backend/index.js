@@ -14,7 +14,7 @@ dotenv.config()
 
 const port = process.env.PORT || 5000
 app.use(cors({
-    origin: "social-media-alpha-ruby.vercel.app",
+    origin: "https://social-media-alpha-ruby.vercel.app",
     credentials: true
 }))
 app.use(express.json())
